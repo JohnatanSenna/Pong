@@ -90,7 +90,7 @@ function movimentaRaquete(){
   }
 }
 function movimentaRaqueteOponente(){
-  velocidadeyOponente = yBolinha - yRaqueteOponente - raqueteComprimento / 2 - 30
+  velocidadeyOponente = yBolinha - yRaqueteOponente - raqueteComprimento / 2 - 50
   yRaqueteOponente += velocidadeyOponente
 }
 
@@ -123,14 +123,14 @@ function incluiPlacar(){
 }
 
 function marcaPonto(){
-  if(xBolinha > xRaqueteOponente){
+  if(xBolinha > 590){
     meusPontos += 1;
     ponto.play();
     xBolinha = 300;
     yBolinha = 200;
     velocidadeyBolinha *= -1
   }
-  if(xBolinha < xRaquete){
+  if(xBolinha < 10){
     pontosOponente +=1;
     ponto.play();
     xBolinha = 300;
